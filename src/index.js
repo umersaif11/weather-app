@@ -9,9 +9,11 @@ async function getWeather(){
         if(!response.ok){
             throw new Error('Whops! Error:', response.status);
         }
+        const responseData = await response.json();
+        console.log(responseData);
     }
-    catch {
-
+    catch(error) {
+        console.log('Network error:', error);
     }
 }
 getWeather();
