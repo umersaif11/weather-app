@@ -1,0 +1,12 @@
+{
+  // 1. Set Prettier as the default tool for formatting
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // 2. Enable formatting every time you save a file
+  "editor.formatOnSave": true,
+
+  // 3. Run ESLint's auto-fixer when you save
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  }
+}
