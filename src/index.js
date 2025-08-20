@@ -6,12 +6,7 @@ const WeatherInfo = () => {
         try {
             const response = await fetch(
                 `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/london?key=2VQ3QPNM3QNQE6SW7FCVEMYRT`);
-            console.log(response);
-            // if(!response.ok){
-            //     throw new Error('Whops! Error:', response.status);
-            // }
             const responseData = await response.json();
-            console.log(responseData);
             return responseData;
         
         }
@@ -19,11 +14,18 @@ const WeatherInfo = () => {
             console.log('Network error:', error);
         }
     }
-    console.log(getWeatherData());
-    const getNeededWeatherData = () => {
-        
+    async function processWeatherData() {
+        const result = await getWeatherData();
+        return {
+           city: result.address, 
+           description: result.description,
+        }
     }
-
+    console.log(processWeatherData());
+    return {
+        processWeatherData,
+    }
 }
-WeatherInfo();
+WeatherInfo().processWeatherData();
+
   
