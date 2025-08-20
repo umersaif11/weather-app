@@ -1,7 +1,7 @@
 // weather.js
 import { getWeatherData } from './api.js'
 
-async function processWeatherPrimaryData(location) {
+async function processWeatherData(location) {
     const result = await getWeatherData(location);
     return {
         city: result.address, 
@@ -14,7 +14,9 @@ async function processWeatherPrimaryData(location) {
         feelslike: result.currentConditions.feelslike,
         precipitation: result.currentConditions.precip,
         windspeed: result.currentConditions.windspeed,
+        uvlevel: result.days[0].uvindex,
         humidity: result.currentConditions.humidity,
+        upcomingdays: result.days.slice(0,8)
     }
 }
-export{ processWeatherPrimaryData }
+export{ processWeatherData }
