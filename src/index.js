@@ -2,4 +2,5 @@
 import "./styles.css";
 import { processWeatherData } from './weather.js'
 
-console.log(processWeatherData());
+const refinedDataObject = await processWeatherData();
+console.log(refinedDataObject);
