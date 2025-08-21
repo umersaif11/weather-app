@@ -33,7 +33,7 @@ async function processWeatherData(location) {
         windspeed: result.currentConditions.windspeed,
         uvlevel: result.days[0].uvindex,
         humidity: result.currentConditions.humidity,
-        upcomingdays: result.days.slice(0,8)
+        upcomingdays: upcomingDays
     }
 }
 export{ processWeatherData }
