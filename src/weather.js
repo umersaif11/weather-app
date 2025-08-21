@@ -20,8 +20,14 @@ async function processWeatherData(location) {
     const upcomingDays = sevenUpcomingDays.map(day => {
         return {
             date: day.datetime,
-            tempmax: day.tempmax,
-            tempmin: day.tempmin,
+            tempmax: {
+                f: day.tempmax,
+                c: convertToCelsius(day.tempmax)
+            },
+            tempmin: {
+                f: day.tempmin,
+                c: convertToCelsius(day.tempmin)
+            },
             conditions: day.conditions
         }
     })
