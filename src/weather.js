@@ -34,12 +34,18 @@ async function processWeatherData(location) {
     return {
         city: result.address, 
         description: result.description,
-        temperature: result.currentConditions.temp,
+        temperature: {
+            f: result.currentConditions.temp,
+            c: convertToCelsius(result.currentConditions.temp)
+        },
         sunrise: result.currentConditions.sunrise,
         sunset: result.currentConditions.sunset,
         moonphase: result.currentConditions.moonphase,
         todayoverview: todayOverview,
-        feelslike: result.currentConditions.feelslike,
+        feelslike: {
+            f: result.currentConditions.feelslike,
+            c: convertToCelsius(result.currentConditions.feelslike)
+        },
         precipitation: result.currentConditions.precip,
         windspeed: result.currentConditions.windspeed,
         uvlevel: result.days[0].uvindex,
