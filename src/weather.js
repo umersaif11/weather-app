@@ -1,13 +1,20 @@
 // weather.js
 import { getWeatherData } from './api.js'
 
+function convertToCelsius(fahrenheit) {
+  return Math.round(((fahrenheit - 32) * 5 / 9) * 10) / 10;
+}
+
 async function processWeatherData(location) {
     const result = await getWeatherData(location);
     const sevenUpcomingDays = result.days.slice(0,8);
     const todayOverview = result.days[0].hours.map(dayhour => {
         return {
             time: dayhour.datetime,
-            temperature: dayhour.temp
+            temperature: {
+                f: dayhour.temp,
+                c: convertToCelsius(dayhour.temp)
+            }
         }
     })
     const upcomingDays = sevenUpcomingDays.map(day => {
