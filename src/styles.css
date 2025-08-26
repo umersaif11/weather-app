@@ -8,18 +8,13 @@
   font-family: "Montserrat", sans-serif;
 }
 
-html,
 body {
-  height: 100%;
-  overflow: hidden;
-}
-
-body {
-  font-family: "Lumanosimo";
-  background-color: antiquewhite;
-  padding: 0;
-  position: relative;
+  background: #f4f6f8;
+  color: #212529;
+  line-height: 1.5;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
