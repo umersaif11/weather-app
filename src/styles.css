@@ -19,10 +19,20 @@ body {
   align-items: center;
 }
 header{
-  background: linear-gradient(135deg, #0f1f3c, #2a5298);
+  background: linear-gradient(130deg, #13274c, #2e5baa);
   width: 100%;
+  padding: 1rem 2rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
   color: white;
 }
+#weather-form{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
 #app{
   flex: 1;
 }
