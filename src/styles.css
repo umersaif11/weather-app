@@ -38,6 +38,12 @@ header{
   letter-spacing: 0.5px;
   color: #fff;
 }
+.right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
 
 #app{
   flex: 1;
