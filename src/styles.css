@@ -18,7 +18,11 @@ body {
   justify-content: center;
   align-items: center;
 }
-
+header{
+  background: linear-gradient(135deg, #0f1f3c, #2a5298);
+  width: 100%;
+  color: white;
+}
 #app{
   flex: 1;
 }
