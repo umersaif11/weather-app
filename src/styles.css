@@ -44,6 +44,15 @@ header{
   gap: 0.75rem;
   flex-wrap: wrap;
 }
+#location{
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  min-width: 230px;
+  font-family: "Montserrat", sans-serif;
+}
 
 #app{
   flex: 1;
