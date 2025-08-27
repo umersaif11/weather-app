@@ -36,34 +36,45 @@
               fill="url(#paint1_linear_16_25)"
               />
               <defs>
-              <linearGradient 
-              id="paint0_linear_16_25" 
-              x1="0.0628467" 
-              y1="0.154894" 
-              x2="16.3014" 
-              y2="16.2094" 
-              gradientUnits="userSpaceOnUse"
-              >
-              <stop stop-opacity="0.6"/>
-              <stop offset="1" stop-color="#666666" stop-opacity="0.3"/>
-              </linearGradient>
-              <linearGradient 
-              id="paint1_linear_16_25" 
-              x1="0.0628467" 
-              y1="0.154894" 
-              x2="16.3014" 
-              y2="16.2094" 
-              gradientUnits="userSpaceOnUse"
-              >
-              <stop stop-opacity="0.6"/>
-              <stop offset="0.5" stop-color="#333333" stop-opacity="0"/>
-              <stop offset="1" stop-color="#666666" stop-opacity="0.3"/>
-              </linearGradient>
+                <linearGradient 
+                id="paint0_linear_16_25" 
+                x1="0.0628467" 
+                y1="0.154894" 
+                x2="16.3014" 
+                y2="16.2094" 
+                gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-opacity="0.6"/>
+                  <stop offset="1" stop-color="#666666" stop-opacity="0.3"/>
+                </linearGradient>
+                <linearGradient 
+                id="paint1_linear_16_25" 
+                x1="0.0628467" 
+                y1="0.154894" 
+                x2="16.3014" 
+                y2="16.2094" 
+                gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-opacity="0.6"/>
+                  <stop offset="0.5" stop-color="#333333" stop-opacity="0"/>
+                  <stop offset="1" stop-color="#666666" stop-opacity="0.3"/>
+                </linearGradient>
               </defs>
             </svg>
           </button>
+          <div class="unit-toggle">
+            <input type="checkbox" id="unitSwitch">
+            <label for="unitSwitch" class="slider">
+              <span class="unit-text celsius">°C</span>
+              <span class="unit-text fahrenheit">°F</span>
+            </label>
+          </div>
         </div>
       </form>
     </header>
+
+    <div id="app"></div>
+
+    <footer></footer>
   </body>
 </html>
