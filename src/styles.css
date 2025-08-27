@@ -32,6 +32,12 @@ header{
   flex-wrap: wrap;
   gap: 1rem;
 }
+.left h1{
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
 
 #app{
   flex: 1;
