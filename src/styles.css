@@ -93,6 +93,10 @@ header{
     transform 0.2s ease,
     background 0.3s ease;
 }
+#search-btn:hover {
+  background: #e67348;
+  transform: scale(1.08);
+}
 
 #app{
   flex: 1;
