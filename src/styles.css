@@ -49,7 +49,6 @@ header{
     #ff7f50  
   );
   background-size: 400%;
-
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -80,6 +79,19 @@ header{
   font-size: 1rem;
   min-width: 230px;
   font-family: "Montserrat", sans-serif;
+}
+#search-btn{
+  background: #e59766;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:
+    transform 0.2s ease,
+    background 0.3s ease;
 }
 
 #app{
