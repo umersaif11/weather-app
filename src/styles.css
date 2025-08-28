@@ -95,8 +95,40 @@ header{
 }
 #search-btn:hover {
   background: #e67348;
-  transform: scale(1.08);
+  transform: scale(1.06);
 }
+#search-btn svg {
+  width: 20px;
+  height: 20px;
+}
+.unit-toggle {
+  position: relative;
+  width: 70px;
+  height: 34px;
+}
+
+.unit-toggle input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #66c569;
+  border-radius: 34px;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+
 
 #app{
   flex: 1;
