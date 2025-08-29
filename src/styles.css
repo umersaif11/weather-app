@@ -19,7 +19,8 @@ body {
   align-items: center;
 }
 header{
-  background: linear-gradient(130deg, #13274c, #2e5baa);
+  /* background: linear-gradient(130deg, #13274c, #2e5baa); */
+  background: linear-gradient(130deg, #13274c, #618bd3);
   width: 100%;
   padding: 1rem 2rem;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
@@ -79,6 +80,23 @@ header{
   font-size: 1rem;
   min-width: 230px;
   font-family: "Montserrat", sans-serif;
+  
+  border: 3.5px solid transparent;
+  background-image: 
+    linear-gradient(white, white), 
+    linear-gradient(to right, #fc8561, #8ff470);
+  background-origin: border-box; 
+  background-clip: padding-box, border-box; 
+}
+#location:focus {
+  outline: none; 
+  background-image: 
+    linear-gradient(white, white), 
+    linear-gradient(to right, #8ff470, #fc8561); 
+}
+.input-wrapper{
+  position: relative;
+  
 }
 #search-btn{
   background: #e59766;
@@ -163,6 +181,12 @@ header{
 .unit-toggle input:checked + .slider::before {
   transform: translateX(34px);
   background-color: #1565c0;
+}
+.unit-toggle input:checked + .slider .unit-text.celsius {
+  color: rgba(255, 255, 255, 0.6);
+}
+.unit-toggle input:checked + .slider .unit-text.fahrenheit {
+  color: #ffffff;
 }
 
 
