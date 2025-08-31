@@ -51,6 +51,7 @@ async function processWeatherData(location) {
     uvlevel: result.days[0].uvindex,
     humidity: result.currentConditions.humidity,
     upcomingdays: upcomingDays,
+    icon: result.currentConditions.icon
   };
 }
 export { processWeatherData };
