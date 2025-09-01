@@ -14,6 +14,6 @@ async function getWeatherData(location = "london") {
 }
 
 async function getLocationData(location){
-  
+  const encodedLocation = encodeURIComponent(location);
 }
 export { getWeatherData };
