@@ -18,7 +18,12 @@ async function getLocationData(location){
   const response = await fetch(
     `https://us1.locationiq.com/v1/search?key=pk.878c1fdb1c7c62477f111ba0d35333bf&q=${encodedLocation}&format=json&limit=1&namedetails=1&addressdetails=1`
   );
-  console.log(response)
+  if(response.status === 404) {
+    throw new Error('Location not found');
+  }
+  if(!response.ok){
+    throw new Error(`locationIQ api error: ${response.status}`);
+  }
 }
 export { 
   getWeatherData,
