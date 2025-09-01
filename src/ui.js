@@ -14,14 +14,14 @@ function renderWeather(weatherData){
 
     const headerCountryCode = document.createElement('h4');
     headerCountryCode.classList.add('locationCountryCode');
-    const countryCode = ' ' + weatherData.countrycode.toUpperCase();
+    const countryCode = ' ' + weatherData.countrycode;
     headerCountryCode.textContent = countryCode
-    ? (', ', countryCode)
+    ? (', ', countryCode.toUpperCase())
     : '';
 
     header.appendChild(
         headerLocation,
-        headerCountryCode,
+        headerCountryCode
     )
 
     currentForecast.appendChild(header);
