@@ -24,6 +24,8 @@ async function getLocationData(location){
   if(!response.ok){
     throw new Error(`locationIQ api error: ${response.status}`);
   }
+  const data = await response.json();
+  return data;
 }
 export { 
   getWeatherData,
