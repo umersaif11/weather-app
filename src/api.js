@@ -12,4 +12,8 @@ async function getWeatherData(location = "london") {
     console.log("Network error:", error);
   }
 }
+
+async function getLocationData(location){
+  
+}
 export { getWeatherData };
