@@ -1,5 +1,5 @@
 //ui.js
-function renderWeather(weatherData, displayCityName, countryCode){
+function renderWeather(weatherData){
     const app = document.getElementById('app');
     app.innerHTML = '';
 
@@ -10,14 +10,18 @@ function renderWeather(weatherData, displayCityName, countryCode){
 
     const headerLocation = document.createElement('h2');
     headerLocation.classList.add('locationHead');
-    headerLocation.textContent = displayCityName;
+    headerLocation.textContent = weatherData.city;
 
     const headerCountryCode = document.createElement('h4');
     headerCountryCode.classList.add('locationCountryCode');
-    countryCode = ' ' + countryCode;
+    const countryCode = ' ' + weatherData.countrycode.toUpperCase();
+    headerCountryCode.textContent = countryCode
+    ? (', ', countryCode)
+    : '';
 
     header.appendChild(
-        headerLocation
+        headerLocation,
+        headerCountryCode,
     )
 
     currentForecast.appendChild(header);
