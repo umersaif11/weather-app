@@ -13,11 +13,13 @@ async function processLocationData(location){
     displayCityName: data[0].namedetails["name:en"] 
     ? data[0].namedetails["name:en"]
     : data[0].namedetails.name,
-  }
+    countryCode: data[0].address.country_code
+  };
 }
 
 async function processWeatherData(location) {
   const result = await getWeatherData(location);
+  const locationIQ = await processLocationData(location);
   const sevenUpcomingDays = result.days.slice(0, 8);
   const todayOverview = result.days[0].hours.map((dayhour) => {
     return {
@@ -43,7 +45,8 @@ async function processWeatherData(location) {
     };
   });
   return {
-    city: result.address,
+    city: locationIQ.displayCityName,
+    countrycode: locationIQ.countryCode.toUpperCase(),
     description: result.description,
     temperature: {
       f: result.currentConditions.temp,
