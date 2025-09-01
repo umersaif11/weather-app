@@ -7,6 +7,10 @@ function convertToCelsius(fahrenheit) {
 async function processLocationData(location){
   const data = await getLocationData(location);
   if(!data[0]) throw new Error('Location not found');
+  return {
+    lat: data[0].lat,
+    lon: data[0].lon,
+  }
 }
 
 async function processWeatherData(location) {
