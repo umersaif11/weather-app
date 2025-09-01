@@ -10,6 +10,9 @@ async function processLocationData(location){
   return {
     lat: data[0].lat,
     lon: data[0].lon,
+    displayCityName: data[0].namedetails["name:en"] 
+    ? data[0].namedetails["name:en"]
+    : data[0].namedetails.name,
   }
 }
 
