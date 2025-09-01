@@ -1,5 +1,5 @@
 //ui.js
-function renderWeather(weatherData, displayCityName){
+function renderWeather(weatherData, displayCityName, countryCode){
     const app = document.getElementById('app');
     app.innerHTML = '';
 
@@ -11,6 +11,10 @@ function renderWeather(weatherData, displayCityName){
     const headerLocation = document.createElement('h2');
     headerLocation.classList.add('locationHead');
     headerLocation.textContent = displayCityName;
+
+    const headerCountryCode = document.createElement('h4');
+    headerCountryCode.classList.add('locationCountryCode');
+    countryCode = ' ' + countryCode;
 
     header.appendChild(
         headerLocation
