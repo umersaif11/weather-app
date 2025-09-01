@@ -5,4 +5,4 @@ import { renderWeather } from "./ui.js"
 
 const refinedDataObject = await processWeatherData("sydney");
 console.log(refinedDataObject);
-renderWeather(refinedDataObject, 'Sydney');
+renderWeather(refinedDataObject);

@@ -46,7 +46,7 @@ async function processWeatherData(location) {
   });
   return {
     city: locationIQ.displayCityName,
-    countrycode: locationIQ.countryCode.toUpperCase(),
+    countrycode: locationIQ.countryCode,
     lon: locationIQ.lon,
     lat: locationIQ.lat,
     description: result.description,
