@@ -1,8 +1,12 @@
 // weather.js
-import { getWeatherData } from "./api.js";
+import { getWeatherData, getLocationData } from "./api.js";
 
 function convertToCelsius(fahrenheit) {
   return Math.round((((fahrenheit - 32) * 5) / 9) * 10) / 10;
+}
+async function processLocationData(location){
+  const data = await getLocationData(location);
+  if(!data[0]) throw new Error('Location not found');
 }
 
 async function processWeatherData(location) {
