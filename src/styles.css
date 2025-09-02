@@ -193,4 +193,7 @@ header{
 
 #app{
   flex: 1;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 100%;
 }
