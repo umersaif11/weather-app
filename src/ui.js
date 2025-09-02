@@ -19,9 +19,14 @@ function renderWeather(weatherData){
     ? (', ' + countryCode.toUpperCase())
     : '';
 
+    const description = document.createElement('p');
+    description.classList.add('weather-description');
+    description.textContent = weatherData.description;
+
     header.append(
         headerLocation,
-        headerCountryCode
+        headerCountryCode,
+        description
     )
 
     currentForecast.appendChild(header);
