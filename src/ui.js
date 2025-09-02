@@ -14,12 +14,12 @@ function renderWeather(weatherData){
 
     const headerCountryCode = document.createElement('h4');
     headerCountryCode.classList.add('locationCountryCode');
-    const countryCode = ' ' + weatherData.countrycode;
+    const countryCode = ' ' + weatherData.countryCode;
     headerCountryCode.textContent = countryCode
-    ? (', ', countryCode.toUpperCase())
+    ? (', ' + countryCode.toUpperCase())
     : '';
 
-    header.appendChild(
+    header.append(
         headerLocation,
         headerCountryCode
     )
