@@ -40,7 +40,36 @@ const weatherIconMap = {
   "waning-crescent": "wi-moon-waning-crescent-3",
 };
 
-
+const weatherImageMap = {
+  "clear-day":
+    "clear blue sky, radiant midday sun, no clouds, vivid light, high resolution, nature background",
+  "clear-night":
+    "star-filled night sky, bright full moon, deep navy blue tones, crystal clear atmosphere, high resolution",
+  "partly-cloudy-day":
+    "blue sky with scattered cumulus clouds, bright sunlight, soft shadows, peaceful atmosphere",
+  "partly-cloudy-night":
+    "night sky with scattered clouds, moonlight streaming through, soft contrast, tranquil mood",
+  cloudy:
+    "dense overcast sky, thick gray clouds, muted daylight, moody atmosphere, no ground visible",
+  fog: "soft hazy sky, low visibility, pale muted tones, atmospheric mist, dreamy aesthetic",
+  wind: "sky with fast-moving streaked clouds, dynamic motion, dramatic lighting, high contrast",
+  rain: "dark stormy rain-filled sky, heavy gray clouds, visible rain streaks, moody dramatic feel",
+  snow: "overcast winter sky, pale diffused light, falling snowflakes, cold serene mood",
+  "snow-showers-day":
+    "bright daylight with gentle falling snow, soft diffused light, white overcast sky",
+  "snow-showers-night":
+    "dark snowy night sky, faint moonlight glow, falling snowflakes, serene atmosphere",
+  "thunder-rain":
+    "dramatic storm clouds, heavy rain, lightning bolt cutting through, intense atmosphere",
+  "thunder-showers-day":
+    "daylight with dark storm clouds, lightning flashes, rain falling, high drama sky",
+  "thunder-showers-night":
+    "night sky illuminated by lightning, rain streaks visible, stormy mood",
+  "showers-day":
+    "overcast daytime sky, light drizzle, soft gray clouds, gentle lighting",
+  "showers-night":
+    "dark rainy night sky, faint glow through clouds, raindrops visible, moody ambiance",
+};
 function renderWeather(weatherData){
     const app = document.getElementById('app');
     app.innerHTML = '';
