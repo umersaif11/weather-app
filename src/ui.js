@@ -14,7 +14,7 @@ function renderWeather(weatherData){
 
     const headerCountryCode = document.createElement('h4');
     headerCountryCode.classList.add('locationCountryCode');
-    const countryCode = ' ' + weatherData.countryCode;
+    const countryCode = ' ' + weatherData.countrycode;
     headerCountryCode.textContent = countryCode
     ? (', ' + countryCode.toUpperCase())
     : '';
