@@ -56,7 +56,7 @@ async function processWeatherData(location) {
     },
     sunrise: result.currentConditions.sunrise,
     sunset: result.currentConditions.sunset,
-    moonphase: result.currentConditions.moonphase,
+    moonphase: result.days[0].moonphase,
     todayoverview: todayOverview,
     feelslike: {
       f: result.currentConditions.feelslike,
