@@ -1,4 +1,5 @@
 //ui.js
+import "weather-icons/css/weather-icons.css";
 const weatherIconMap = {
   "clear-day": "wi-day-sunny",
   "clear-night": "wi-night-clear",
@@ -70,6 +71,9 @@ const weatherImageMap = {
   "showers-night":
     "dark rainy night sky, faint glow through clouds, raindrops visible, moody ambiance",
 };
+function getWeatherIconClass(icon) {
+    return weatherIconMap[icon] || 'wi-na';
+}
 function renderWeather(weatherData){
     const app = document.getElementById('app');
     app.innerHTML = '';
