@@ -96,6 +96,8 @@ function getMoonPhaseIcon(value) {
 }
 function formatTime(timestr) {
   if(!timestr) return 'N/A';
+  const date = new Date(`1970-01-01T${timestr}`);
+  
 }
 function renderWeather(weatherData){
     const app = document.getElementById('app');
