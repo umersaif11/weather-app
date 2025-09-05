@@ -95,7 +95,7 @@ function getMoonPhaseIcon(value) {
     return 'waning-crescent';
 }
 function formatTime(timestr) {
-  
+  if(!timestr) return 'N/A';
 }
 function renderWeather(weatherData){
     const app = document.getElementById('app');
