@@ -94,6 +94,9 @@ function getMoonPhaseIcon(value) {
     if (value === 0.75) return 'last-quarter';
     return 'waning-crescent';
 }
+function formatTime(timestr) {
+  
+}
 function renderWeather(weatherData){
     const app = document.getElementById('app');
     app.innerHTML = '';
