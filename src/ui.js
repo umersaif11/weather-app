@@ -123,6 +123,9 @@ function renderWeather(weatherData){
     description.classList.add('weather-description');
     description.textContent = weatherData.description;
 
+    const sunMoonContainer = document.createElement('div');
+    
+
     header.append(
         headerLocation,
         headerCountryCode,
