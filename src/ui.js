@@ -115,6 +115,10 @@ async function setLocationBackground(query) {
 
     if(data.photos && data.photos.length > 0) {
       const imageUrl = data.photos[0].src.landscape;
+      location.style.backgroundImage = `url${imageUrl}`;
+      location.style.backgroundSize = 'cover';
+      location.style.backgroundPosition = 'center';
+      location.style.backgroundRepeat = 'no-repeat';
       
     }
   }
