@@ -54,20 +54,20 @@ async function processWeatherData(location) {
       f: result.currentConditions.temp,
       c: convertToCelsius(result.currentConditions.temp),
     },
-    sunrise: result.currentConditions.sunrise,
-    sunset: result.currentConditions.sunset,
+    sunrise: result.days[0].sunrise,
+    sunset: result.days[0].sunset,
     moonphase: result.days[0].moonphase,
     todayoverview: todayOverview,
     feelslike: {
       f: result.currentConditions.feelslike,
       c: convertToCelsius(result.currentConditions.feelslike),
     },
-    precipitation: result.currentConditions.precip,
-    windspeed: result.currentConditions.windspeed,
+    precipitation: result.days[0].precip,
+    windspeed: result.days[0].windspeed,
     uvlevel: result.days[0].uvindex,
     humidity: result.currentConditions.humidity,
     upcomingdays: upcomingDays,
-    icon: result.currentConditions.icon
+    icon: result.days[0].icon
   };
 }
 export { processWeatherData };
