@@ -129,7 +129,7 @@ async function setLocationBackground(query) {
     console.log('Error fetching pexels:', error);
   }
 }
-function renderWeather(weatherData){
+async function renderWeather(weatherData){
     const app = document.getElementById('app');
     app.innerHTML = '';
 
@@ -188,6 +188,9 @@ function renderWeather(weatherData){
 
     app.appendChild(currentForecast);
 
+    // let iconKey = weatherData.icon;
+    // let searchTerm = weatherImageMap[iconKey] || 'beautiful sky landscape';
+    // await setLocationBackground(searchTerm);
 
 }
 export { renderWeather }
