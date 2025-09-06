@@ -99,6 +99,9 @@ function formatTime(timestr) {
   const date = new Date(`1970-01-01T${timestr}`);
   return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit'});
 }
+async function setLocationBackground(query) {
+  
+}
 function renderWeather(weatherData){
     const app = document.getElementById('app');
     app.innerHTML = '';
