@@ -114,6 +114,7 @@ async function setLocationBackground(query) {
     const data = await response.json();
 
     if(data.photos && data.photos.length > 0) {
+      const imageUrl = data.photos[0].src.landscape;
       
     }
   }
