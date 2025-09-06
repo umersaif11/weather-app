@@ -132,7 +132,13 @@ function renderWeather(weatherData){
     </i>
     Sunrise: ${formatTime(weatherData.sunrise)}`;
 
-    sunMoonContainer.append(sunrise);
+    const sunset = document.createElement('div');
+    sunset.innerHTML = `
+    <i class='wi ${getWeatherIconClass('sun-set')}'>
+    </i>
+    Sunset: ${formatTime(weatherData.sunset)}`;
+
+    sunMoonContainer.append(sunrise, sunset);
 
     header.append(
         headerLocation,
