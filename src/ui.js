@@ -124,12 +124,21 @@ function renderWeather(weatherData){
     description.textContent = weatherData.description;
 
     const sunMoonContainer = document.createElement('div');
-    
+    sunMoonContainer.classList.add('sunMoonTimes');
+
+    const sunrise = document.createElement('div');
+    sunrise.innerHTML = `
+    <i class='wi ${getWeatherIconClass('sun-rise')}'>
+    </i>
+    Sunrise: ${formatTime(weatherData.sunrise)}`;
+
+    sunMoonContainer.append(sunrise);
 
     header.append(
         headerLocation,
         headerCountryCode,
-        description
+        description,
+        sunMoonContainer
     )
 
     currentForecast.appendChild(header);
