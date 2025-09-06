@@ -138,7 +138,14 @@ function renderWeather(weatherData){
     </i>
     Sunset: ${formatTime(weatherData.sunset)}`;
 
-    sunMoonContainer.append(sunrise, sunset);
+    const moonPhaseValue = weatherData.moonphase;
+    const moonphase = document.createElement('div');
+    moonphase.innerHTML = `
+    <i class='wi ${getWeatherIconClass(getMoonPhaseIcon(moonPhaseValue))}'>
+    </i>
+    ${getMoonPhaseName(moonPhaseValue)}`;
+
+    sunMoonContainer.append(sunrise, sunset, moonphase);
 
     header.append(
         headerLocation,
