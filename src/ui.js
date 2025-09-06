@@ -107,11 +107,15 @@ async function setLocationBackground(query) {
       `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&per_page=1&orientation=landscape`,
       {
         headers: {
-          Authorization: RBhECvORcQjs8GUlW3FXmy7WwczHde6Tbhke2hr2tWRyY4acANLRq6A4,
+          Authorization: 'RBhECvORcQjs8GUlW3FXmy7WwczHde6Tbhke2hr2tWRyY4acANLRq6A4',
         }
       }
     );
     const data = await response.json();
+
+    if(data.photos && data.photos.length > 0) {
+      
+    }
   }
   catch {
 
