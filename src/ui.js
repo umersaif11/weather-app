@@ -119,11 +119,14 @@ async function setLocationBackground(query) {
       location.style.backgroundSize = 'cover';
       location.style.backgroundPosition = 'center';
       location.style.backgroundRepeat = 'no-repeat';
-      
+      location.style.color = '#fff';
+      location.style.padding = '1rem';
+      location.style.borderRadius = '10px';
+      location.style.boxShadow = '0px 4px 15px rgba(0, 0, 0, 0.4)';
     }
   }
-  catch {
-
+  catch(error) {
+    console.log('Error fetching pexels:', error);
   }
 }
 function renderWeather(weatherData){
