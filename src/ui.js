@@ -100,7 +100,8 @@ function formatTime(timestr) {
   return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit'});
 }
 async function setLocationBackground(query) {
-  
+  const location = document.querySelector('.currentForecast');
+  if(!location) return;
 }
 function renderWeather(weatherData){
     const app = document.getElementById('app');
