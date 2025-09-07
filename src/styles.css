@@ -204,4 +204,8 @@ header{
   background-color: rgba(0, 0, 0, 0.4);
   background-blend-mode: darken;
   backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  transition: background-image 0.6s ease-in-out;
 }
