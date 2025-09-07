@@ -209,3 +209,11 @@ header{
   flex-direction: column;
   transition: background-image 0.6s ease-in-out;
 }
+.location{
+  text-align: center;
+}
+.locationHead{
+  font-size: 2rem;
+  font-weight: bold;
+  display: inline-block;
+}
