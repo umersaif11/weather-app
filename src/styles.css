@@ -217,3 +217,8 @@ header{
   font-weight: bold;
   display: inline-block;
 }
+.locationCountryCode{
+  display: inline-block;
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
