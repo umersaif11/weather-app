@@ -231,3 +231,7 @@ header{
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 12px;
 }
+.sunMoonTimes div{
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+}
