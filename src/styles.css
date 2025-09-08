@@ -201,7 +201,7 @@ header{
   padding: 24px;
 }
 .currentForecast{
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   background-blend-mode: darken;
   backdrop-filter: blur(12px);
   display: flex;
