@@ -186,6 +186,12 @@ async function renderWeather(weatherData){
 
     currentForecast.appendChild(header);
 
+    const todayDetails = document.createElement('div');
+    todayDetails.classList.add('todayDetails');
+
+    const todayOverview = document.createElement('div');
+    todayOverview.classList.add('todayOverview');
+
     app.appendChild(currentForecast);
 
     let iconKey = weatherData.icon;
