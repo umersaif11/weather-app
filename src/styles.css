@@ -234,4 +234,7 @@ header{
 .sunMoonTimes div{
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(8px);
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
 }
