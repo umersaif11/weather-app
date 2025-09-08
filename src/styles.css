@@ -222,3 +222,12 @@ header{
   font-size: 1.1rem;
   opacity: 0.85;
 }
+.weather-description{
+  margin-top: 8px;
+}
+.sunMoonTimes {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
