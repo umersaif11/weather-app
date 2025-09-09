@@ -272,3 +272,7 @@ header{
 .tempCard:hover{
   transform: translateY(-3px);
 }
+.tempCard i{
+  font-size: 22px;
+  margin: 5px 0;
+}
