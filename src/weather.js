@@ -21,7 +21,8 @@ async function processWeatherData(location) {
   const result = await getWeatherData(location);
   const locationIQ = await processLocationData(location);
   const sevenUpcomingDays = result.days.slice(0, 8);
-  const todayOverview = result.days[0].hours.map((dayhour) => {
+  const todayAndTomorrow = [...result.days[0].hours, ...result.days[1].hours];
+  const todayOverview =todayAndTomorrow.map((dayhour) => {
     return {
       time: dayhour.datetime,
       temperature: {
