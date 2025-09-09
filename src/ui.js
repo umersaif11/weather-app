@@ -249,7 +249,11 @@ async function renderWeather(weatherData, currentUnit){
      <i class="wi ${getWeatherIconClass('rain')}"></i>
      <strong>Precipitation</strong><br>${weatherData.precipitation || 0}%
     </div>
-     <div>
+    <div>
+     <i class="wi ${getWeatherIconClass('windspeed')}"></i>
+     <strong>Wind Speed</strong><br>${weatherData.windspeed} mph
+    </div>
+    <div>
      <i class="wi ${getWeatherIconClass('clear-day')}"></i>
      <strong>UV level</strong><br>${weatherData.uvlevel}
     </div>
