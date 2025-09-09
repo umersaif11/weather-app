@@ -254,4 +254,6 @@ header{
 }
 .tempCards{
   display: flex;
+  gap: 12px;
+  padding-bottom: 8px;
 }
