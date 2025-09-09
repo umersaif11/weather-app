@@ -129,8 +129,9 @@ async function setLocationBackground(query) {
     console.log('Error fetching pexels:', error);
   }
 }
-async function renderWeather(weatherData){
+async function renderWeather(weatherData, currentUnit){
     const app = document.getElementById('app');
+    const unitSymbol = (currentUnit === 'metric') ? '°C' : '°F';
     app.innerHTML = '';
 
     const currentForecast = document.createElement('div');
@@ -195,6 +196,9 @@ async function renderWeather(weatherData){
     const todayHead = document.createElement('h3');
     todayHead.classList.add('todayHead');
     todayHead.textContent = "Today's Overview";
+
+    const tempCards = document.createElement('div');
+    tempCards.classList.add('tempCards');
 
     todayOverview.append(todayHead);
     todayDetails.append(todayOverview);
