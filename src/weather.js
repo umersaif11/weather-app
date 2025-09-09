@@ -29,6 +29,7 @@ async function processWeatherData(location) {
         f: dayhour.temp,
         c: convertToCelsius(dayhour.temp),
       },
+      datetime: dayhour.datetime
     };
   });
   const upcomingDays = sevenUpcomingDays.map((day) => {
