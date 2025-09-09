@@ -220,12 +220,14 @@ async function renderWeather(weatherData, currentUnit){
       const hourIcon = document.createElement('i');
       hourIcon.classList.add('wi', getWeatherIconClass(hour.icon));
 
-      const tempValue = (currentUnit === 'metric')
-                         ? hour.temperature.c
-                         : hour.temperature.f;
-                                            
+      const tempValue = (
+        currentUnit === 'metric') 
+        ? hour.temperature.c 
+        : hour.temperature.f;
+      const hourTemp = document.createElement('p');
+      hourTemp.textContent = `${tempValue} ${unitSymbol}`;
 
-      tempCard.append(hourTime, hourIcon);
+      tempCard.append(hourTime, hourIcon, hourTemp);
       tempCards.append(tempCard);
     }
 
