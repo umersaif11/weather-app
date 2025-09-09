@@ -266,4 +266,9 @@ header{
   color: #fff;
   border-radius: 10px;
   min-width: 90px; 
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+.tempCard:hover{
+  transform: translateY(-3px);
 }
