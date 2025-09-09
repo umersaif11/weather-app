@@ -204,7 +204,10 @@ async function renderWeather(weatherData, currentUnit){
     const currentHour = now.getHours();
     const hours = weatherData.todayOverview;
     let count = 0;
-    
+    for(let i = currentHour; i < hours.length && count < 6; i+=3) {
+      count++;
+      
+    }
 
     todayOverview.append(todayHead);
     todayDetails.append(todayOverview);
