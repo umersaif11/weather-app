@@ -263,5 +263,7 @@ header{
   background: inherit;
   padding: 12px;
   text-align: center;
-  
+  color: #fff;
+  border-radius: 10px;
+  min-width: 90px; 
 }
