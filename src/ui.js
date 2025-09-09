@@ -202,11 +202,16 @@ async function renderWeather(weatherData, currentUnit){
 
     const now = new Date();
     const currentHour = now.getHours();
-    const hours = weatherData.todayOverview;
+    const hours = weatherData.todayoverview;
     let count = 0;
     for(let i = currentHour; i < hours.length && count < 6; i+=3) {
       count++;
-      
+      const hour = hours[i];
+      const tempCard = document.createElement('div');
+      tempCard.classList.add('tempCard');
+
+      const hourTime = document.createElement('p');
+      const [h] = hour.datetime.split(':');
     }
 
     todayOverview.append(todayHead);
