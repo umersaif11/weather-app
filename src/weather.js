@@ -65,9 +65,9 @@ async function processWeatherData(location) {
       f: result.currentConditions.feelslike,
       c: convertToCelsius(result.currentConditions.feelslike),
     },
-    precipitation: result.days[0].precip,
-    windspeed: result.days[0].windspeed,
-    uvlevel: result.days[0].uvindex,
+    precipitation: result.currentConditions.precipprob,
+    windspeed: result.currentConditions.windspeed,
+    uvlevel: result.currentConditions.uvindex,
     humidity: result.currentConditions.humidity,
     upcomingdays: upcomingDays,
     icon: result.days[0].icon
