@@ -238,7 +238,16 @@ async function renderWeather(weatherData, currentUnit){
         currentUnit === 'metric') 
         ? weatherData.feelslike.c 
         : weatherData.feelslike.f;
-        
+    const metrics = document.createElement('div');
+    metrics.classList.add('humidityWind');
+    metrics.innerHTML = `
+    <div>
+     <i class="wi ${getWeatherIconClass('feelslike')}"></i>
+     <strong>Feels Like</strong><br>${feelslikeTemp}${unitSymbol}
+    </div>
+    `
+    
+    todayDetails.append(metrics);
 
     currentForecast.append(todayDetails);
 
