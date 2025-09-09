@@ -245,6 +245,10 @@ async function renderWeather(weatherData, currentUnit){
      <i class="wi ${getWeatherIconClass('feelslike')}"></i>
      <strong>Feels Like</strong><br>${feelslikeTemp}${unitSymbol}
     </div>
+    <div>
+     <i class="wi ${getWeatherIconClass('rain')}"></i>
+     <strong>Precipitation</strong><br>${weatherData.precipprob || 0}%
+    </div>
     `
     
     todayDetails.append(metrics);
