@@ -234,6 +234,12 @@ async function renderWeather(weatherData, currentUnit){
     todayOverview.append(todayHead, tempCards);
     todayDetails.append(todayOverview);
 
+    const feelslikeTemp = (
+        currentUnit === 'metric') 
+        ? weatherData.feelslike.c 
+        : weatherData.feelslike.f;
+        
+
     currentForecast.append(todayDetails);
 
     app.appendChild(currentForecast);
