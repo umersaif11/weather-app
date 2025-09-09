@@ -238,3 +238,13 @@ header{
   padding: 12px;
   text-align: center;
 }
+.todayOverview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+}
