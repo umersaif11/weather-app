@@ -212,6 +212,7 @@ async function renderWeather(weatherData, currentUnit){
 
       const hourTime = document.createElement('p');
       const [h] = hour.datetime.split(':');
+      let hourNum = parseInt(h, 10);
     }
 
     todayOverview.append(todayHead);
