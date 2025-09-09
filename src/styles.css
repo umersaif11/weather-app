@@ -276,3 +276,9 @@ header{
   font-size: 22px;
   margin: 5px 0;
 }
+.humidityWind{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+ 
+}
