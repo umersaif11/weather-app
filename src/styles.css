@@ -280,5 +280,12 @@ header{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
- 
+}
+.humidityWind div{
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
