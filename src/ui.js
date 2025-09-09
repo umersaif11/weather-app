@@ -215,9 +215,16 @@ async function renderWeather(weatherData, currentUnit){
       let hourNum = parseInt(h, 10);
       const ampm = hourNum >= 12 ? 'PM' : 'AM';
       hourNum = hourNum % 12 || 12;
+      hourTime.textContent = `${hourNum} ${ampm}`;
+
+      const hourIcon = document.createElement('i');
+      hourIcon.classList.add('wi', getWeatherIconClass(hour.icon));
+
+      tempCard.append(hourTime, hourIcon);
+      tempCards.append(tempCard);
     }
 
-    todayOverview.append(todayHead);
+    todayOverview.append(todayHead, tempCards);
     todayDetails.append(todayOverview);
 
     currentForecast.append(todayDetails);
