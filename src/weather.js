@@ -37,12 +37,12 @@ async function processWeatherData(location) {
     return {
       date: day.datetime,
       tempmax: {
-        f: day.tempmax,
-        c: convertToCelsius(day.tempmax),
+        f: Math.round(day.tempmax),
+        c: Math.round(convertToCelsius(day.tempmax)),
       },
       tempmin: {
-        f: day.tempmin,
-        c: convertToCelsius(day.tempmin),
+        f: Math.round(day.tempmin),
+        c: Math.round(convertToCelsius(day.tempmin)),
       },
       conditions: day.conditions,
     };
