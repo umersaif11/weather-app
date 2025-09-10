@@ -18,8 +18,8 @@ async function processLocationData(location){
 }
 
 async function processWeatherData(location) {
-  const result = await getWeatherData(location);
   const locationIQ = await processLocationData(location);
+  const result = await getWeatherData(locationIQ.lat, locationIQ.lon);
   const sevenUpcomingDays = result.days.slice(0, 7);
   const todayAndTomorrow = [...result.days[0].hours, ...result.days[1].hours];
   const todayOverview =todayAndTomorrow.map((dayhour) => {
