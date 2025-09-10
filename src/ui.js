@@ -281,6 +281,11 @@ async function renderWeather(weatherData, currentUnit){
       const fullDate = date.toLocaleDateString('en-US', options);
 
       const dateEl = document.createElement('p');
+      if(isDayOne === 0) {
+        isDayOne++;
+        dateEl.textContent = 'Today';
+        dateEl.style.fontWeight = 'bold'
+      }
     })
 }
 export { renderWeather }
