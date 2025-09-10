@@ -292,6 +292,15 @@ async function renderWeather(weatherData, currentUnit){
       const icon = document.createElement('i');
       icon.classList.add('wi', getWeatherIconClass(day.icon));
 
+      const maxTempValue = (
+        currentUnit === 'metric') 
+        ? day.tempmax.c 
+        : day.tempmax.f;
+      const minTempValue = (
+        currentUnit === 'metric') 
+        ? day.tempmin.c 
+        : day.tempmin.f;  
+
       dayCard.append(dateEl, icon);
       forecast.append(dayCard);
     })
