@@ -269,5 +269,7 @@ async function renderWeather(weatherData, currentUnit){
     let searchTerm = weatherImageMap[iconKey] || 'beautiful sky landscape';
     await setLocationBackground(searchTerm);
 
+    const forecast = document.createElement('div');
+    forecast.classList.add('weeklyForecast');
 }
 export { renderWeather }
