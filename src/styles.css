@@ -314,3 +314,10 @@ header{
   margin: 0.5rem 0;
   color: #a0a0a0
 }
+.dayCard strong {
+  color: #dc3545;
+}
+.dayCard p:last-child {
+  color: #6c757d;
+  font-size: 12px;
+}
