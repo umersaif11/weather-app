@@ -281,6 +281,10 @@ header{
   grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
+.humidityWind i {
+  font-size: 16px;
+  margin-right: 4px;
+}
 .humidityWind div{
   padding: 12px;
   border-radius: 8px;
