@@ -299,4 +299,7 @@ header{
   justify-items: center;
   align-items: center;
   text-align: center;
+  font-size: 14px;
+  padding: 12px;
+  background: #fff;
 }
