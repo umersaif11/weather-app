@@ -45,6 +45,7 @@ async function processWeatherData(location) {
         c: Math.round(convertToCelsius(day.tempmin)),
       },
       conditions: day.conditions,
+      icon: day.icon
     };
   });
   return {
