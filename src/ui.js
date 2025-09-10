@@ -289,7 +289,10 @@ async function renderWeather(weatherData, currentUnit){
         dateEl.textContent = fullDate;
       }
 
-      dayCard.append(dateEl);
+      const icon = document.createElement('i');
+      icon.classList.add('wi', getWeatherIconClass(day.icon));
+
+      dayCard.append(dateEl, icon);
       forecast.append(dayCard);
     })
     app.append(forecast);
