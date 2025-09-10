@@ -285,6 +285,8 @@ async function renderWeather(weatherData, currentUnit){
         isDayOne++;
         dateEl.textContent = 'Today';
         dateEl.style.fontWeight = 'bold'
+      } else {
+        dateEl.textContent = fullDate;
       }
     })
 }
