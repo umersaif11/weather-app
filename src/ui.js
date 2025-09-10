@@ -299,9 +299,15 @@ async function renderWeather(weatherData, currentUnit){
       const minTempValue = (
         currentUnit === 'metric') 
         ? day.tempmin.c 
-        : day.tempmin.f;  
+        : day.tempmin.f;
+      const temp = document.createElement('p');
+      temp.innerHTML = `
+      ${day.conditions}<br>
+      <strong>${maxTempValue}${unitSymbol}</strong>/
+      ${minTempValue}${unitSymbol}    
+      `    
 
-      dayCard.append(dateEl, icon);
+      dayCard.append(dateEl, icon, temp);
       forecast.append(dayCard);
     })
     app.append(forecast);
