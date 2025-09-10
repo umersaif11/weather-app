@@ -306,3 +306,11 @@ header{
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
   transition: transform 0.2s ease;
 }
+.dayCard:hover{
+  transform: translateY(-4px);
+}
+.dayCard i{
+  font-size: 1.8rem;
+  margin: 0.5rem 0;
+  color: #a0a0a0
+}
