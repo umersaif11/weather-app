@@ -6,7 +6,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-  outline: 1.5px solid red;
 }
 
 body {
@@ -324,4 +323,8 @@ header{
 .dayCard p:last-child {
   color: #6c757d;
   font-size: 12px;
+}
+.wi-sunrise,
+.wi-sunset {
+  color: #ffb347;
 }
