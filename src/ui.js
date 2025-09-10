@@ -279,6 +279,8 @@ async function renderWeather(weatherData, currentUnit){
       const date = new Date(day.date);
       const options = { weekday: "short", month: "short", day: "numeric"}
       const fullDate = date.toLocaleDateString('en-US', options);
+
+      const dateEl = document.createElement('p');
     })
 }
 export { renderWeather }
