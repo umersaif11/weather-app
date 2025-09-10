@@ -273,7 +273,8 @@ async function renderWeather(weatherData, currentUnit){
     forecast.classList.add('weeklyForecast');
     let isDayOne = 0;
     weatherData.upcomindays.foreach((day) => {
-      
+      const dayCard = document.createElement('div');
+      dayCard.classList.add('dayCard');
     })
 }
 export { renderWeather }
