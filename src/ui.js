@@ -288,6 +288,10 @@ async function renderWeather(weatherData, currentUnit){
       } else {
         dateEl.textContent = fullDate;
       }
+
+      dayCard.append(dateEl);
+      forecast.append(dayCard);
     })
+    app.append(forecast);
 }
 export { renderWeather }
