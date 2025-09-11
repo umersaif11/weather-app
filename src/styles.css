@@ -410,13 +410,19 @@ footer a:hover {
     justify-content: center;
   }
   #weather-form h1{
-    font-size: 28px;
+    font-size: 30px;
   }
   .tempCard {
     min-width: 70px;
   }
   .locationHead{
     font-size: 26px;
+  }
+  .locationCountryCode {
+    font-size: 14px;
+  }
+  .currentForecast, .dayCard, footer{
+    font-size: 12px;
   }
 }
 @media (max-width: 345px) {
