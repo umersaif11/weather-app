@@ -15,8 +15,9 @@ const form = document.getElementById('weather-form');
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
     document.getElementById('app').innerHTML = `
-    <div class="welcome-message>
-     <img >
+    <div class='welcome-message'>
+     <img src=${loading} alt='Loading' class='welcome.gif'>
+     <h2>Fetching Data...</h2>
     </div>   
     `
 })
