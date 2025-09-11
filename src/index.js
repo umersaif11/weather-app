@@ -27,6 +27,16 @@ form.addEventListener('submit', async (e) => {
         handleError(error);
     }
 });
+const unitSwitch = document.querySelector('.unit-toggle');
+unitSwitch.addEventListener('change', () => {
+    if(unitSwitch.checked) {
+        currentUnit = 'us';
+    } else {
+        currentUnit = 'metric';
+    }
+
+    
+})
 document.getElementById('app').innerHTML = `
   <div class='welcome-message'>
     <img src=${welcomegif} alt='Welcome' class='welcome-gif'>
