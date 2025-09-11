@@ -27,7 +27,7 @@ form.addEventListener('submit', async (e) => {
         handleError(error);
     }
 });
-const unitSwitch = document.querySelector('.unit-toggle');
+const unitSwitch = document.getElementById('unitSwitch');
 unitSwitch.addEventListener('change', () => {
     if(unitSwitch.checked) {
         currentUnit = 'us';
@@ -42,7 +42,9 @@ unitSwitch.addEventListener('change', () => {
             <h2>Updating Units...</h2>
         </div>   
         `;
-        renderWeather(currentWeatherData, currentUnit);
+        setTimeout(() => {
+            renderWeather(currentWeatherData, currentUnit);
+        }, 1000);
     }
 })
 document.getElementById('app').innerHTML = `
