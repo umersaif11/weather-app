@@ -382,4 +382,10 @@ footer a:hover {
   .currentForecast{
     border-radius: 0; 
   }
+  .weeklyForecast{
+    margin-bottom: 15px;
+  }
+  #location{
+    font-size: 12px;
+  }
 }
