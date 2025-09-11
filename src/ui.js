@@ -1,5 +1,6 @@
 //ui.js
 import "weather-icons/css/weather-icons.css";
+import badRequest from "./images/badRequest.gif";
 const weatherIconMap = {
   "clear-day": "wi-day-sunny",
   "clear-night": "wi-night-clear",
@@ -128,6 +129,15 @@ async function setLocationBackground(query) {
   catch(error) {
     console.log('Error fetching pexels:', error);
   }
+}
+function handleError(error) {
+  document.getElementById('app').innerHTML = `
+  <div class='welcome-message'>
+    <img src=${badRequest} alt='Bad Request' class='welcome.gif'>
+    <h2>Bad Request</h2>
+    <p>${error}</p>
+  </div>   
+  `;
 }
 async function renderWeather(weatherData, currentUnit){
     const app = document.getElementById('app');
@@ -312,4 +322,4 @@ async function renderWeather(weatherData, currentUnit){
     })
     app.append(forecast);
 }
-export { renderWeather }
+export { renderWeather, handleError }
