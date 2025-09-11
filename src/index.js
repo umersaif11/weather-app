@@ -9,3 +9,8 @@ let currentWeatherData = null;
 const refinedDataObject = await processWeatherData("hafizabad, pakistan");
 console.log(refinedDataObject);
 renderWeather(refinedDataObject, currentUnit);
+
+const form = document.getElementById('weather-form');
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+})
