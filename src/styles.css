@@ -388,4 +388,12 @@ footer a:hover {
   #location{
     font-size: 12px;
   }
+  .welcome-message{
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 675px) {
+  .tempCard:nth-child(2n){
+    display: none;
+  }
 }
