@@ -428,9 +428,9 @@ footer a:hover {
 @media (max-width: 345px) {
   .sunMoonTimes{
     grid-template-columns: 1fr;
-    width: 100%;
   } 
-  .sunMoonTimes > div:nth-child(2){
+  .sunMoonTimes > div:nth-child(2),
+  .sunMoonTimes > div:nth-child(1){
     grid-column: 1/3;
   }
 }
