@@ -7,10 +7,6 @@ import loading from "./images/fetchData.gif"
 let currentUnit = 'metric';
 let currentWeatherData = null;
 
-const refinedDataObject = await processWeatherData("hafizabad, pakistan");
-console.log(refinedDataObject);
-renderWeather(refinedDataObject, currentUnit);
-
 const form = document.getElementById('weather-form');
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -19,5 +15,14 @@ form.addEventListener('submit', async (e) => {
      <img src=${loading} alt='Loading' class='welcome.gif'>
      <h2>Fetching Data...</h2>
     </div>   
-    `
+    `;
+    const locationInput = document.getElementById('location').value;
+    try {
+        currentWeatherData = await processWeatherData(locationInput);
+        console.log(currentWeatherData);
+        renderWeather(currentWeatherData, currentUnit);
+    }
+    catch(error) {
+        
+    }
 })
