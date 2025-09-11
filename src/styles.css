@@ -211,6 +211,10 @@ header{
   color: #555;
   transition: all 0.3s ease-in-out;
 }
+.welcome-gif{
+  width: 250px;
+  height: 250px;
+}
 .currentForecast{
   background-color: rgba(0, 0, 0, 0.6);
   background-blend-mode: darken;
