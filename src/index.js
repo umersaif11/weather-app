@@ -1,7 +1,7 @@
 // index.js
 import "./styles.css";
 import { processWeatherData } from "./weather.js";
-import { renderWeather } from "./ui.js";
+import { renderWeather, handleError } from "./ui.js";
 import loading from "./images/fetchData.gif"
 
 let currentUnit = 'metric';
@@ -23,6 +23,6 @@ form.addEventListener('submit', async (e) => {
         renderWeather(currentWeatherData, currentUnit);
     }
     catch(error) {
-        
+        handleError(error);
     }
 })
