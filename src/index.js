@@ -2,7 +2,8 @@
 import "./styles.css";
 import { processWeatherData } from "./weather.js";
 import { renderWeather, handleError } from "./ui.js";
-import loading from "./images/fetchData.gif"
+import loading from "./images/fetchData.gif";
+import welcomegif from "./images/welcome.gif";
 
 let currentUnit = 'metric';
 let currentWeatherData = null;
@@ -25,4 +26,11 @@ form.addEventListener('submit', async (e) => {
     catch(error) {
         handleError(error);
     }
-})
+});
+document.getElementById('app').innerHTML = `
+  <div class='welcome-message'>
+    <img src=${welcomegif} alt='Welcome' class='welcome.gif'>
+    <h2>Weather at your fingertips</h2>
+    <p>Enter a location above to see real-time weather updates</p>
+  </div>   
+  `;
