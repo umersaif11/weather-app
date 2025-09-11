@@ -13,7 +13,7 @@ form.addEventListener('submit', async (e) => {
     e.preventDefault();
     document.getElementById('app').innerHTML = `
     <div class='welcome-message'>
-     <img src=${loading} alt='Loading' class='welcome.gif'>
+     <img src=${loading} alt='Loading' class='welcome-gif'>
      <h2>Fetching Data...</h2>
     </div>   
     `;
@@ -29,7 +29,7 @@ form.addEventListener('submit', async (e) => {
 });
 document.getElementById('app').innerHTML = `
   <div class='welcome-message'>
-    <img src=${welcomegif} alt='Welcome' class='welcome.gif'>
+    <img src=${welcomegif} alt='Welcome' class='welcome-gif'>
     <h2>Weather at your fingertips</h2>
     <p>Enter a location above to see real-time weather updates</p>
   </div>   

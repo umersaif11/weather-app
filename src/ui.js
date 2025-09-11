@@ -133,7 +133,7 @@ async function setLocationBackground(query) {
 function handleError(error) {
   document.getElementById('app').innerHTML = `
   <div class='welcome-message'>
-    <img src=${badRequest} alt='Bad Request' class='welcome.gif'>
+    <img src=${badRequest} alt='Bad Request' class='welcome-gif'>
     <h2>Bad Request</h2>
     <p>${error}</p>
   </div>   
