@@ -35,7 +35,15 @@ unitSwitch.addEventListener('change', () => {
         currentUnit = 'metric';
     }
 
-    
+    if(currentWeatherData) {
+        document.getElementById('app').innerHTML = `
+        <div class='welcome-message'>
+            <img src=${loading} alt='Loading' class='welcome-gif'>
+            <h2>Updating Units...</h2>
+        </div>   
+        `;
+        renderWeather(currentWeatherData, currentUnit);
+    }
 })
 document.getElementById('app').innerHTML = `
   <div class='welcome-message'>
