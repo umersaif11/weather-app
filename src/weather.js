@@ -4,16 +4,16 @@ import { getWeatherData, getLocationData } from "./api.js";
 function convertToCelsius(fahrenheit) {
   return Math.round((((fahrenheit - 32) * 5) / 9) * 10) / 10;
 }
-async function processLocationData(location){
+async function processLocationData(location) {
   const data = await getLocationData(location);
-  if(!data[0]) throw new Error('Location not found');
+  if (!data[0]) throw new Error("Location not found");
   return {
     lat: data[0].lat,
     lon: data[0].lon,
-    displayCityName: data[0].namedetails["name:en"] 
-    ? data[0].namedetails["name:en"]
-    : data[0].namedetails.name,
-    countryCode: data[0].address.country_code
+    displayCityName: data[0].namedetails["name:en"]
+      ? data[0].namedetails["name:en"]
+      : data[0].namedetails.name,
+    countryCode: data[0].address.country_code,
   };
 }
 
@@ -22,7 +22,7 @@ async function processWeatherData(location) {
   const result = await getWeatherData(locationIQ.lat, locationIQ.lon);
   const sevenUpcomingDays = result.days.slice(0, 7);
   const todayAndTomorrow = [...result.days[0].hours, ...result.days[1].hours];
-  const todayOverview =todayAndTomorrow.map((dayhour) => {
+  const todayOverview = todayAndTomorrow.map((dayhour) => {
     return {
       time: dayhour.datetime,
       temperature: {
@@ -30,7 +30,7 @@ async function processWeatherData(location) {
         c: convertToCelsius(dayhour.temp),
       },
       datetime: dayhour.datetime,
-      icon: dayhour.icon
+      icon: dayhour.icon,
     };
   });
   const upcomingDays = sevenUpcomingDays.map((day) => {
@@ -45,7 +45,7 @@ async function processWeatherData(location) {
         c: Math.round(convertToCelsius(day.tempmin)),
       },
       conditions: day.conditions,
-      icon: day.icon
+      icon: day.icon,
     };
   });
   return {
@@ -71,7 +71,7 @@ async function processWeatherData(location) {
     uvlevel: result.currentConditions.uvindex,
     humidity: result.currentConditions.humidity,
     upcomingdays: upcomingDays,
-    icon: result.days[0].icon
+    icon: result.days[0].icon,
   };
 }
 export { processWeatherData };
