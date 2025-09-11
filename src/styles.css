@@ -199,6 +199,14 @@ header{
   gap: 24px;
   padding: 24px;
 }
+.welcome-message{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  grid-column: 1/3;
+}
 .currentForecast{
   background-color: rgba(0, 0, 0, 0.6);
   background-blend-mode: darken;
