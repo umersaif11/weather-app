@@ -399,4 +399,7 @@ footer a:hover {
   .sunMoonTimes{
     grid-template-columns: 1fr 1fr;
   }
+  .sunMoonTimes > div:last-child{
+    grid-column: 1/3;
+  }
 }
