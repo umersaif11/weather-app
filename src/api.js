@@ -5,10 +5,11 @@ async function getWeatherData(lat, lon) {
     const response = await fetch(
       `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${lat},${lon}?key=2VQ3QPNM3QNQE6SW7FCVEMYRT`,
     );
+    if(!response.ok) throw new Error(`Weather Api Error: ${response.status}`);
     const responseData = await response.json();
     return responseData;
   } catch (error) {
-    console.log("Network error:", error);
+    throw new Error("Network error:", error);
   }
 }
 
