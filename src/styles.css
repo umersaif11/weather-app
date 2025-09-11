@@ -396,4 +396,7 @@ footer a:hover {
   .tempCard:nth-child(2n){
     display: none;
   }
+  .sunMoonTimes{
+    grid-template-columns: 1fr 1fr;
+  }
 }
